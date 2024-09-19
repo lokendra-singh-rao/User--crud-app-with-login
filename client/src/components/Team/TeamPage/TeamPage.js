@@ -66,6 +66,7 @@ function TeamPage({ setTeamPageActive }) {
   }
 
   const handlePageChange = (newPage) => {
+    setIsLoading(true)
     setCurrentPage(newPage);
   };
 

@@ -21,7 +21,7 @@ export const listUsers = async ({ page, query }) => {
         }
       }
 
-      const totalPages = totalUsers.data/itemsPerPage;
+      const totalPages = Math.ceil(totalUsers.data/itemsPerPage);
       return {
         ok: true,
         status: 200,

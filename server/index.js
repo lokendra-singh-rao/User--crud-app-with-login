@@ -18,7 +18,7 @@ const app = express();
 export const port = process.env.PORT || 8080;
 
 app.use(cookieParser());
-app.use(cors({ origin: "https://user-app-nine-ashen.vercel.app", credentials: true }));
+app.use(cors({ origin: process.env.ALLOWED_ORIGINS, credentials: true }));
 app.use(express.json());
 app.use("/images", express.static("images"));
 
@@ -35,5 +35,5 @@ app.use((_, res) => {
 
 //Called when server starts
 app.listen(port, (req, res) => {
-  logger.info("✅ Server running at http://localhost:" + `${port}`);
+  logger.info("✅ Server running at PORT:" + `${port}`);
 });
