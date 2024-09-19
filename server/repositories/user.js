@@ -27,7 +27,7 @@ export const listUsers = async ({ page, itemsPerPage, query }) => {
 
 export const getTotalActiveUsers = async ({query}) => {
   try {
-    const totalUsers = await userModel.find({ active: true }).count();
+    const totalUsers = await userModel.find({ active: true }).countDocuments();
     return { ok: true, status: 200, data: totalUsers };
   } catch (err) {
     logger.error("Error in getTotalActiveUsers repo", err);
