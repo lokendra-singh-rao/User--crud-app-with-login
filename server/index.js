@@ -18,7 +18,7 @@ const app = express();
 export const port = process.env.PORT || 8080;
 
 app.use(cookieParser());
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: "https://user-app-nine-ashen.vercel.app", credentials: true }));
 app.use(express.json());
 app.use("/images", express.static("images"));
 
