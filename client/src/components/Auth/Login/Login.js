@@ -69,7 +69,7 @@ function Login() {
           <hr className={styles.horizontalLineLogin} />
           <div className={styles.loginRightInfo}>
             <h1>Welcome back!</h1>
-            <p>Log in to continue and access all the features</p>
+            <p>Log in to continue and access all the features <br></br> Email - admin@test.com Pass - 123456</p>
           </div>
           <div className={styles.loginFormContainer}>
             <form className={styles.loginForm}>
