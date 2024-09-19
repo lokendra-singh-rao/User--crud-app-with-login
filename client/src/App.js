@@ -17,11 +17,11 @@ function App() {
 
   useEffect(() => {
     try {
-      if (Cookies.get("token")) {
-        setToken(Cookies.get("token"));
+      if (localStorage.getItem("isLoggedIn")) {
+        setToken(localStorage.getItem("isLoggedIn"));
       }
-      if (Cookies.get("user")) {
-        setUser(JSON.parse(Cookies.get("user")));
+      if (localStorage.getItem("user")) {
+        setUser(JSON.parse(localStorage.getItem("user")));
       }
       setLoading(false);
     } catch (error) {

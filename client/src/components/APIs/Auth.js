@@ -22,8 +22,7 @@ export function useLogout() {
       url: `${values.serverURL}/logout`,
       method: values.methods.GET,
     });
-    Cookies.remove("token");
-    Cookies.remove("user");
+    localStorage.clear()
     setToken("");
     setUser("");
     navigate("/login");

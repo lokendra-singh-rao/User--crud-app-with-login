@@ -26,8 +26,10 @@ function Login() {
       } else {
         setToken(data?.token);
         setUser(data?.user);
+        localStorage.setItem("isLoggedIn", true)
+        localStorage.setItem("user", JSON.stringify(data?.user))
         toast.success("Logged in successfully!");
-
+        
         navigate("/");
       }
     } catch (error) {
