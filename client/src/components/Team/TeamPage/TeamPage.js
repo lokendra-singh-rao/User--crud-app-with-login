@@ -14,9 +14,16 @@ function TeamPage({ setTeamPageActive }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const logout = useLogout();
+  let isFirst = true;
 
   useEffect(() => {
-    fetchUsers();
+    if(isFirst) {
+      setTimeout(() => {
+        fetchUsers()
+      }, 2000);
+    } else {
+      fetchUsers();
+    }
   }, [currentPage]);
 
   useEffect(() => {
@@ -63,27 +70,11 @@ function TeamPage({ setTeamPageActive }) {
   };
 
   return (
-    <main
-      className={styles.teamPage}
-      style={{ zIndex: 0 }}
-    >
+    <main className={styles.teamPage} style={{ zIndex: 0 }}>
       <h1>Our Team</h1>
-      <SearchBar
-        setCurrentPage={setCurrentPage}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        searchUsers={fetchUsers}
-      />
-      <TeamGrid
-        users={users}
-        fetchUsers={fetchUsers}
-        isLoading={isLoading}
-      />
-      <Pagination
-        currentPage={currentPage}
-        totalPage={totalPage}
-        onPageChange={handlePageChange}
-      />
+      <SearchBar setCurrentPage={setCurrentPage} searchQuery={searchQuery} setSearchQuery={setSearchQuery} searchUsers={fetchUsers} />
+      <TeamGrid users={users} fetchUsers={fetchUsers} isLoading={isLoading} />
+      <Pagination currentPage={currentPage} totalPage={totalPage} onPageChange={handlePageChange} />
     </main>
   );
 }
