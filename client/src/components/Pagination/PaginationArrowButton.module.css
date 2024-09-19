@@ -1,0 +1,9 @@
+.arrowButton {
+  margin: 0 7.5px;
+  padding: 7.5px 12.5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+}

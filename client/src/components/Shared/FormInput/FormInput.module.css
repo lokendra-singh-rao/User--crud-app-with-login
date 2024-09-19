@@ -1,0 +1,22 @@
+.formGroup {
+  margin-bottom: 2px;
+  padding: 0 32px;
+}
+
+.mandatoryField,
+.inputError {
+  color: #d92d20;
+  margin: 0;
+  font-size: 12px;
+}
+
+.inputError {
+  min-height: 16.5px;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #344054;
+}

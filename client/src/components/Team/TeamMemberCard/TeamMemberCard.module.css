@@ -1,0 +1,75 @@
+.memberCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  height: max-content;
+}
+
+.memberCard:hover {
+  transition: 150ms ease-in-out;
+  transform: scale(1.025);
+}
+
+.memberCardInfo {
+  overflow: hidden;
+  text-align: center;
+  background-color: #f6f6f6;
+  border-radius: 0 0 16px 16px;
+  margin-top: -5px;
+  border: 1.5px solid #ddd;
+}
+
+.memberCardInfo p {
+  margin-bottom: 16px;
+  margin-top: 2px;
+  color: #333;
+  font-size: 18px;
+}
+
+.memberImage {
+  position: relative;
+}
+
+.memberImage img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.deleteIcon {
+  display: none;
+  max-width: 2rem;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+  position: absolute;
+  transition: 200ms;
+}
+
+.deleteIcon:hover {
+  transform: scale(1.125);
+}
+
+.deleteIcon:active {
+  transform: scale(0.8);
+}
+
+.memberCard:hover .deleteIcon {
+  display: block;
+}
+
+.memberCardInfo h3 {
+  margin-bottom: 2px;
+  margin-top: 12px;
+}
+
+@media screen and (max-width: 1000px) {
+  .memberCard {
+    font-size: 12px;
+  }
+
+  .memberCardInfo p {
+    font-size: 12px;
+  }
+}

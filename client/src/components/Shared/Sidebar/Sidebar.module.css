@@ -1,0 +1,116 @@
+.sidebar {
+  position: sticky;
+  left: 0;
+  top: 75px;
+  width: 225px;
+  flex-shrink: 0;
+  box-shadow: 2px 2.5px 5px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 76.5px);
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #667085;
+}
+
+.sidebar nav {
+  height: 100%;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 15px 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.sidebar img {
+  width: 1.25rem;
+}
+
+.sidebar li.active {
+  background-color: #e0e0ff;
+  color: #2510c3;
+}
+
+svg {
+  fill: rgb(102, 112, 133);
+}
+
+.active svg {
+  fill: #2510c3;
+}
+
+.uoloLogoSidebar {
+  display: none;
+}
+
+.backdrop {
+  display: none;
+}
+
+.sidebarLogoutButton {
+  align-content: end;
+  padding-bottom: 20px;
+  flex-grow: 1;
+}
+
+.sidebarLogoutButton img {
+  width: 18px;
+}
+
+@media screen and (max-width: 700px) {
+  .backdrop {
+    display: block;
+    background-color: #000000b0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+  }
+
+  .sidebar li {
+    padding: 25px 20px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    transition: 350ms;
+    width: 75%;
+    top: 0;
+    z-index: 1001;
+    height: 100%;
+    background-color: #fff;
+  }
+
+  .phoneActive {
+    left: 0;
+  }
+
+  .uoloLogoSidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .uoloLogoSidebar img {
+    width: 125px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+}

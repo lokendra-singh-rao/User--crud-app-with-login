@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  outline-color: rgba(86, 31, 231, 1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.app {
+  font-family: "Open Sans", sans-serif;
+}
